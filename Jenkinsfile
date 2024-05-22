@@ -19,10 +19,12 @@ pipeline {
         }
         stage('Read JSON') {
             steps {
+                script {
                 def packageJSON = readJSON file: 'webapp/package.json'
                 def packageJSONVersion = packageJSON.version
                 echo "${packageJSONVersion}"
-                echo " Testing completed"
+        
+                }
                 
             }
         }
