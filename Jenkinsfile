@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Checking..'
                 echo " code quality checking......"
-                sh 'sudo docker run --rm -e SONAR_HOST_URL="http://3.7.70.197:9000//" -e SONAR_LOGIN="sqp_69f7f05dc8fc7986c24018eea330e0c7d07ffbc8" -v ".:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.projectKey=lms'
+                sh 'sudo docker run --rm -e SONAR_HOST_URL="http://3.7.70.197:9000//" -e SONAR_LOGIN="sqp_69f7f05dc8fc7986c24018eea330e0c7d07ffbc8" -v ".:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.projectKey=jms'
                 echo " testing completed "
             }
         }
