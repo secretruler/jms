@@ -21,8 +21,8 @@ pipeline {
                     echo "publishing the lms applcations"
                     def packageJSON = readJSON file: 'webapp/package.json'
                     def packageJSONVersion = packageJSON.version
-                    sh "zip webapp/dist-${packageJSONVersion}.zip -r webapp/dist"
-                    sh "curl -v -u admin:kings --upload-file webapp/dist-${packageJSONVersion}.zip http://65.0.11.240:8081/repository/jms-application/"
+                    sh "zip webapp/lms-${packageJSONVersion}.zip -r webapp/dist"
+                    sh "curl -v -u admin:kings --upload-file webapp/lms-${packageJSONVersion}.zip http://65.0.11.240:8081/repository/jms-application/"
                     echo  "releasing completed"
                 }
             }
