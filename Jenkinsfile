@@ -43,8 +43,6 @@ pipeline {
             }
         }
 
-        http://65.0.11.240:8081/repository/jms-application/lms-1.2.zip 
-
       
     }
 }
