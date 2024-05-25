@@ -34,7 +34,7 @@ pipeline {
                 script {
                     def packageJSON = readJSON file: 'webapp/package.json'
                     def packageJSONVersion = packageJSON.version
-                    sh "curl -u admin:kings -X GET \'http://65.0.11.240:8081/repository/jms-application/lms-1.1.zip'\ --output lms-1.1.zip"
+                    sh "curl -u admin:kings -X GET 'http://65.0.11.240:8081/repository/jms-application/lms-1.1.zip' --output lms-1.1.zip"
                     sh "sudo rm -f /var/www/html/*"
                     sh "sudo unzip  -o dist-'${packageJSONVersion}'.zip"
                     sh "sudo cp -r webapp/dist/* /var/www/html"
